@@ -4,15 +4,14 @@ namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
 
-use Tests\TestCase;
+use App\Contracts\Observers\BookingObserverContract;
 use App\Models\Booking;
 use App\Models\Resource;
-use Laravel\Sanctum\Sanctum;
 use App\Observers\BookingObserver;
-use App\Contracts\Observers\BookingObserverContract;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Laravel\Sanctum\Sanctum;
+use Tests\TestCase;
 
 class BookingTest extends TestCase
 {
@@ -99,12 +98,13 @@ class BookingTest extends TestCase
     }
 }
 
-
-class DummyObserver implements BookingObserverContract{
+class DummyObserver implements BookingObserverContract
+{
     public function created(Model $mode): void
     {
         // Do nothing while testing
     }
+
     public function deleted(Model $booking): void
     {
         // Do nothing while testing

@@ -2,16 +2,16 @@
 
 namespace App\Http\API\Controllers;
 
-use Throwable;
-use Illuminate\Http\JsonResponse;
-use App\Http\Controllers\Controller;
 use App\Contracts\Services\ResourceServiceContract;
-use App\Http\API\Resources\Booking\BookingCollection;
 use App\Http\API\Requests\Resource\BookingListRequest;
-use App\Http\API\Requests\Resource\ResourceListRequest;
-use App\Http\API\Resources\Resource\ResourceCollection;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Http\API\Requests\Resource\CreateResourceRequest;
+use App\Http\API\Requests\Resource\ResourceListRequest;
+use App\Http\API\Resources\Booking\BookingCollection;
+use App\Http\API\Resources\Resource\ResourceCollection;
+use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Http\JsonResponse;
+use Throwable;
 
 class ResourceController extends Controller
 {
@@ -24,6 +24,7 @@ class ResourceController extends Controller
     ): JsonResponse {
         try {
             $resourceService->create($request->validated());
+
             return new JsonResponse(
                 ['message' => 'Resource was created successfully'],
                 201

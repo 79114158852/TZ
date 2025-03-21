@@ -2,8 +2,8 @@
 
 namespace App\Observers;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Contracts\Observers\BookingObserverContract;
+use Illuminate\Database\Eloquent\Model;
 
 class BookingObserver implements BookingObserverContract
 {
@@ -14,7 +14,7 @@ class BookingObserver implements BookingObserverContract
     {
         // Created logic
     }
-    
+
     /**
      * Handle the Booking "deleted" event.
      */

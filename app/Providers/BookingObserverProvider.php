@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use App\Contracts\Observers\BookingObserverContract;
 use App\Observers\BookingObserver;
 use Illuminate\Support\ServiceProvider;
-use App\Contracts\Observers\BookingObserverContract;
 
 /**
  * @psalm-api

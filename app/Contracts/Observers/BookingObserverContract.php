@@ -1,9 +1,12 @@
 <?php
+
 namespace App\Contracts\Observers;
 
 use Illuminate\Database\Eloquent\Model;
 
-interface BookingObserverContract {
+interface BookingObserverContract
+{
     public function created(Model $booking): void;
+
     public function deleted(Model $booking): void;
 }

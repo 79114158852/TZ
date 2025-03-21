@@ -21,6 +21,7 @@ class BookingController extends Controller
     ): JsonResponse {
         try {
             $bookingService->create($request->validated());
+
             return new JsonResponse(
                 ['message' => 'Booking was created successfully'],
                 201

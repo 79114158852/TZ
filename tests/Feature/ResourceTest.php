@@ -66,13 +66,13 @@ class ResourceTest extends TestCase
         $response = $this->getJson('/api/resources');
         $response->assertOk();
         $response->assertJson(fn (AssertableJson $json) => $json->has('data.0', fn (AssertableJson $json) => $json
-                ->whereType('id', 'integer')
-                ->whereType('name', 'string')
-                ->whereType('type', 'string')
-                ->whereType('description', 'string|null')
-                ->whereType('created_at', 'string|null')
-                ->whereType('updated_at', 'string|null')
-            )
+            ->whereType('id', 'integer')
+            ->whereType('name', 'string')
+            ->whereType('type', 'string')
+            ->whereType('description', 'string|null')
+            ->whereType('created_at', 'string|null')
+            ->whereType('updated_at', 'string|null')
+        )
         );
     }
 
@@ -112,13 +112,13 @@ class ResourceTest extends TestCase
         $response = $this->getJson('/api/resources/'.$resource->id.'/bookings');
         $response->assertOk();
         $response->assertJson(fn (AssertableJson $json) => $json->has('data.0', fn (AssertableJson $json) => $json
-                ->whereType('id', 'integer')
-                ->whereType('user', 'array')
-                ->whereType('start_time', 'string')
-                ->whereType('end_time', 'string|null')
-                ->whereType('created_at', 'string|null')
-                ->whereType('updated_at', 'string|null')
-            )
+            ->whereType('id', 'integer')
+            ->whereType('user', 'array')
+            ->whereType('start_time', 'string')
+            ->whereType('end_time', 'string|null')
+            ->whereType('created_at', 'string|null')
+            ->whereType('updated_at', 'string|null')
+        )
         );
     }
 }

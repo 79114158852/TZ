@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use App\Models\Booking;
 use App\Models\Resource;
 use App\Observers\BookingObserver;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\TestCase;
 
 class ObserverTest extends TestCase
 {

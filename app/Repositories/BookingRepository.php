@@ -10,9 +10,9 @@ class BookingRepository implements BookingRepositoryContract
     public function __construct(
         protected Booking $booking
     ) {}
-    
+
     /**
-     * @throws 
+     * @throws
      */
     public function create(array $attributes): Booking
     {
