@@ -1,3 +1,4 @@
+- Настроен sail `vendor/bin/sail up -d`
 - Документация генерируется автоматически (https://github.com/RonasIT/laravel-swagger)
 - Для обновления документации используется команда `artisan app:swagger`
 - Файл документации находится в storage/documentation.json
